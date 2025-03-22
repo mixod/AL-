@@ -1,12 +1,15 @@
 import React from "react";
 import Nav from "../Nav";
 import { Outlet } from "react-router-dom";
+import Contextsss from "../../Pages/Context/Contextsss";
 
 function MainOutlet() {
   return (
     <div>
-      <Nav />
-      <Outlet />
+      <Contextsss>
+        <Nav />
+        <Outlet />
+      </Contextsss>
     </div>
   );
 }
