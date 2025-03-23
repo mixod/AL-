@@ -1,15 +1,9 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
+import { NewContext } from "../Context/Contextsss";
 
 function Home() {
-  const { state, setState } = useContext();
-
-  return (
-    <>
-      {state}
-      <button onClick={() => setState((state) => state + 1)}>click</button>
-      <div className="my-10 mx-10 text-4xl">Home</div>;
-    </>
-  );
+  const myName = useContext(NewContext);
+  return <div>My name is {myName}</div>;
 }
 
 export default Home;

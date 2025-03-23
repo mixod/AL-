@@ -1,10 +1,11 @@
 import { createContext } from "react";
-
 export const NewContext = createContext();
-export function Contextsss({ children }) {
+
+export function ContextNew({ children }) {
+  const myName = "sangram";
   return (
     <div>
-      <NewContext.Provider>{children}</NewContext.Provider>
+      <NewContext.Provider value={myName}>{children}</NewContext.Provider>
     </div>
   );
 }
