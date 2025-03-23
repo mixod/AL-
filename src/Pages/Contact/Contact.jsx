@@ -1,5 +1,14 @@
+import { useContext } from "react";
+import { NewContext } from "../Context/Contextsss";
+
 function Contact() {
-  return <div className="my-10 mx-10 text-4xl">Contact</div>;
+  const { state, setState } = useContext(NewContext);
+  return (
+    <div className="mt-30">
+      {state}
+      <button onClick={() => setState(state + 1)}>CLick</button>
+    </div>
+  );
 }
 
 export default Contact;
