@@ -1,5 +1,14 @@
+import { useContext } from "react";
+import { NewContext } from "../Context/Contextsss";
+
 function About() {
-  return <div className="my-10 mx-10 text-4xl">About</div>;
+  const { state, setState } = useContext(NewContext);
+  return (
+    <div>
+      {state}
+      <button onClick={() => setState(state + 1)}>CLick</button>
+    </div>
+  );
 }
 
 export default About;
